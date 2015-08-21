@@ -14,7 +14,9 @@ exclude: [
   "Vagrantfile",
   "bootstrap.sh",
   "vendor",
-  "slug.sh"
+  "slug.sh",
+  "divshot.json",
+  ".travis.yml"
 ]
 
 title     : Summer
