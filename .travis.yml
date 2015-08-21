@@ -1,22 +1,21 @@
 language: ruby
 rvm:
-  - 2.1
-
+- 2.1
 before_script:
 - echo "HELLO"
-
-# Assume bundler is being used, therefore
-# the `install` step will run `bundle install` by default.
 script:
-  - bundle exec jekyll build
-  - bundle exec htmlproof _site
-
-# branch whitelist, only for GitHub Pages
-# branches:
-#  only:
-#  - gh-pages     # test the gh-pages branch
-#  - /pages-(.*)/ # test every branch which starts with "pages-"
-
+- bundle exec jekyll build
+- bundle exec htmlproof _site
 env:
   global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+deploy:
+  provider: divshot
+  api_key:
+    secure: SeCw3Q7vdz9TeSSEC09bOJy6cXTV8R/IGopMckojOaJhKJLrC/x1KVUOohCaZM6IzcelNUKz8EddllGxRivc+NJd55ZWiKAypTCnHBEIAszBnK1gfGru4Y5QI3du/pOEHCkX5JO/GbVfdCMfUhiCNKWJkWGVXP0Xe4zTFRKOwp8+4cxYIcgy3eqFSQDYuhdtCUIk5L6EGcwU/ldSBhcYhI8yXVpSjZ9YRyimpG1nYsWA9z18KZcXwF7K4jViUMTYz7lHH0uujRP6t3QN7tJ99OWC4FluzQtAGTa61HerITixASGYwfYpEgdnMCv7qzt2tOijxZFBv+OPXj74nILrVmrCgp3Bu0W3fD9PQNd6hd4M7QqiByDcbhJ0qUeVzY2uh84HkMfF1b6fmhfox5kgQUZq8Mg3mc3S26psx39927sW2Hr4GM7m5sRugMvDM0zCkEA4Z6bPlUihqKlPDO9+PR1N4GDKaUh9mTUSQLrkJ59Z9GDBFxZOj+k9JVeHA4P2jjdKjvAMyNun3j2lySbFclc7AXFSMIs4uchfFcBSTlvoeEGlfAEjpeLO0ZKrnq5zSSVTKRzXYpB5KwUZdy0uYMXl7HiWNGQlFLES8aOG6LKWt+bhPF180FrOACPR2cV5zIcnMyWVVHKqubw8aoFpSWVQ/u3wqqWsBVbonHr9GRw=
+  environment:
+    master: development
+    staging: staging
+    production: production
+  on:
+    repo: rey/summer
