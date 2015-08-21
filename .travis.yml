@@ -1,8 +1,8 @@
 language: ruby
 rvm:
 - 2.1
-before_script:
-- echo "HELLO"
+# before_script:
+#- echo "HELLO"
 script:
 - bundle exec jekyll build
 - bundle exec htmlproof _site
@@ -17,5 +17,6 @@ deploy:
     master: development
     staging: staging
     production: production
+  skip_cleanup: true
   on:
     repo: rey/summer
