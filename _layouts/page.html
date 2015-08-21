@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!--[if IE 8]>    <html class="no-js ie8">  <![endif]-->
+<!--[if gt IE 8]> <html class="no-js">      <![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width" name="viewport">
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+    <title>{{ page.title }} &middot; {{ site.title }}</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="assets/images/favicon.ico" rel="shortcut icon" />
+    {% include utility/javascripts_top.html %}
+  </head>
+  <body>
+    <div class="container">
+      {{ content }}
+    </div><!-- /.container -->
+    {% include utility/javascripts_bottom.html %}
+  </body>
+</html>

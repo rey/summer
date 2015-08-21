@@ -1,0 +1,14 @@
+// _litestrap circle
+//
+// NOTE: Set your own damn widths, you crazy kids. If the height != the width,
+// you'll end up with an elipse.
+
+
+%circle {
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+.circle {
+    @extend %circle;
+}

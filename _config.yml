@@ -1,0 +1,33 @@
+gems:
+  - jekyll-sitemap
+
+exclude: [
+  ".rvmrc",
+  ".rbenv-version",
+  "config.rb",
+  "CNAME",
+  "Procfile",
+  "README",
+  "Gemfile",
+  "Gemfile.lock",
+  "sass",
+  "Vagrantfile",
+  "bootstrap.sh",
+  "vendor",
+  "slug.sh"
+]
+
+title     : Summer
+url       : http://example.com
+tagline   : A generic website
+author    : Rey Dhuny
+
+permalink : :short_year/:month/:title.html
+
+encoding  : utf-8
+
+markdown  : kramdown
+
+port      : 4545
+
+timezone  : Europe/London
