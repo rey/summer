@@ -2,4 +2,4 @@
 
 1. `bundle`
 2. `foreman start`
-3. Visit <a href="http://localhost:5555">localhost:4555</a>
+3. Visit <a href="http://localhost:4545">localhost:4545</a>
