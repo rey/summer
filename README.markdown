@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.org/rey/summer.svg?branch=master)](https://travis-ci.org/rey/summer)
-
-# summer
+# summer [![Build Status](https://travis-ci.org/rey/summer.svg?branch=master)](https://travis-ci.org/rey/summer)
 
 1. `bundle`
 2. `foreman start`
