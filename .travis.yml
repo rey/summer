@@ -6,7 +6,8 @@ rvm:
 script:
 - bundle exec sass -c assets/sass/style.scss
 # - bundle exec jekyll build
-- bundle exec JEKYLL_ENV=production jekyll build
+- JEKYLL_ENV=production
+- bundle exec jekyll build
 - bundle exec htmlproof _site --check-html --verbose
 env:
   global:
